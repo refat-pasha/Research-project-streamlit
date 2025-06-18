@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 
 # Load the trained model
-model = joblib.load("best_rf_model.pkl")
+model = joblib.load("models/best_rf_model.pkl")
 
 # Title
 st.title("Heart Disease Prediction App")
