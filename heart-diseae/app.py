@@ -4,7 +4,13 @@ import joblib
 import numpy as np
 
 # Load the trained model
-with open(r"model.pkl", "rb") as model_file:
+import os
+
+model_path = os.path.join(os.path.dirname(__file__), "trained_model.pkl")
+if not os.path.exists(model_path):
+    st.error(f"Model file not found at {model_path}. Please ensure 'trained_model.pkl' is present in the app directory.")
+    st.stop()
+with open(model_path, "rb") as model_file:
     model = joblib.load(model_file)
 
 # Title
