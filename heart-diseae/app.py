@@ -1,13 +1,10 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 import numpy as np
 
-
-
 # Load the trained model
-with open("model.pkl", "rb") as model_file:
-    model = pickle.load(model_file)
+model = joblib.load("model.pkl")
 
 # Title
 st.title("Heart Disease Prediction App")
