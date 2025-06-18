@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 
 # Load the trained model
-with open("model.pkl", "rb") as model_file:
+with open(r"model.pkl", "rb") as model_file:
     model = joblib.load(model_file)
 
 # Title
