@@ -3,15 +3,9 @@ import pandas as pd
 import joblib
 import numpy as np
 
-import os
-if os.path.exists("models"):
-    st.write("Files in 'models':", os.listdir("models"))
-else:
-    st.write("models/ folder not found")
-
 
 # Load the trained model
-model = joblib.load("models/best_rf_model.pkl")
+model = joblib.load("best_rf_model.pkl")
 
 # Title
 st.title("Heart Disease Prediction App")
