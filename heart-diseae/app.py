@@ -4,7 +4,10 @@ import joblib
 import numpy as np
 
 import os
-st.write("Files in current directory:", os.listdir("models"))
+if os.path.exists("models"):
+    st.write("Files in 'models':", os.listdir("models"))
+else:
+    st.write("models/ folder not found")
 
 
 # Load the trained model
