@@ -3,6 +3,10 @@ import pandas as pd
 import joblib
 import numpy as np
 
+import os
+st.write("Files in current directory:", os.listdir("models"))
+
+
 # Load the trained model
 model = joblib.load("models/best_rf_model.pkl")
 
