@@ -4,8 +4,9 @@ import joblib
 import numpy as np
 
 
+
 # Load the trained model
-model = joblib.load("model.pkl")
+model = joblib.load(r"model.pkl")
 
 # Title
 st.title("Heart Disease Prediction App")
